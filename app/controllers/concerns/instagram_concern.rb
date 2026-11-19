@@ -62,7 +62,7 @@ module InstagramConcern
     begin
       JSON.parse(response.body)
     rescue JSON::ParserError => e
-      nerixExceptionTracker.new(e).capture_exception
+      NerixExceptionTracker.new(e).capture_exception
       Rails.logger.error "Invalid JSON response: #{response.body}"
       raise e
     end

@@ -1,14 +1,14 @@
 // Moved from editorHelper.spec.js to editorContentHelper.spec.js
 // the mock of nerix/prosemirror-schema is getting conflicted with other specs
 import { getContentNode } from '../editorHelper';
-import { MessageMarkdownTransformer } from '@nerix/prosemirror-schema';
-import { replaceVariablesInMessage } from '@nerix/utils';
+import { MessageMarkdownTransformer } from '@chatwoot/prosemirror-schema';
+import { replaceVariablesInMessage } from '@chatwoot/utils';
 
-vi.mock('@nerix/prosemirror-schema', () => ({
+vi.mock('@chatwoot/prosemirror-schema', () => ({
   MessageMarkdownTransformer: vi.fn(),
 }));
 
-vi.mock('@nerix/utils', () => ({
+vi.mock('@chatwoot/utils', () => ({
   replaceVariablesInMessage: vi.fn(),
 }));
 

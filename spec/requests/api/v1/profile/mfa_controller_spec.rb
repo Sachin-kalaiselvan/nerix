@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'MFA API', type: :request do
   before do
-    skip('Skipping since MFA is not configured in this environment') unless nerix.encryption_configured?
+    skip('Skipping since MFA is not configured in this environment') unless Nerix.encryption_configured?
     allow(nerix).to receive(:mfa_enabled?).and_return(true)
   end
 

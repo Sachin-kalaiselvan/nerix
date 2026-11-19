@@ -33,7 +33,7 @@ export const FEATURE_FLAGS = {
   LINEAR: 'linear_integration',
   CAPTAIN: 'captain_integration',
   CUSTOM_ROLES: 'custom_roles',
-  nerix_V4: 'nerix_v4',
+  NERIX_V4: 'nerix_v4',
   CHANNEL_INSTAGRAM: 'channel_instagram',
   CHANNEL_TIKTOK: 'channel_tiktok',
   CONTACT_nerix_SUPPORT_TEAM: 'contact_nerix_support_team',

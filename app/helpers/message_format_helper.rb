@@ -11,6 +11,6 @@ module MessageFormatHelper
   end
 
   def render_message_content(message_content)
-    nerixMarkdownRenderer.new(message_content).render_message
+    NerixMarkdownRenderer.new(message_content).render_message
   end
 end

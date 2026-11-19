@@ -82,7 +82,7 @@ class Notification::PushNotificationService
     when Errno::ECONNRESET, Net::OpenTimeout, Net::ReadTimeout, Socket::ResolutionError
       Rails.logger.error "WebPush operation error: #{error.message}"
     else
-      nerixExceptionTracker.new(error, account: notification.account).capture_exception
+      NerixExceptionTracker.new(error, account: notification.account).capture_exception
       true
     end
   end
@@ -104,7 +104,7 @@ class Notification::PushNotificationService
     return unless nerix_hub_enabled?
     return unless subscription.fcm?
 
-    nerixHub.send_push(fcm_options(subscription))
+    NerixHub.send_push(fcm_options(subscription))
   end
 
   def firebase_credentials_present?

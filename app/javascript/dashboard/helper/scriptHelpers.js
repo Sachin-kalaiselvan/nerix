@@ -1,7 +1,7 @@
 import {
   ANALYTICS_IDENTITY,
-  nerix_RESET,
-  nerix_SET_USER,
+  NERIX_RESET,
+  NERIX_SET_USER,
 } from '../constants/appEvents';
 import AnalyticsHelper from './AnalyticsHelper';
 import DashboardAudioNotificationHelper from './AudioAlerts/DashboardAudioNotificationHelper';
@@ -35,12 +35,12 @@ export const initializeAudioAlerts = user => {
 };
 
 export const initializenerixEvents = () => {
-  emitter.on(nerix_RESET, () => {
+  emitter.on(NERIX_RESET, () => {
     if (window.$nerix) {
       window.$nerix.reset();
     }
   });
-  emitter.on(nerix_SET_USER, ({ user }) => {
+  emitter.on(NERIX_SET_USER, ({ user }) => {
     if (window.$nerix) {
       window.$nerix.setUser(user.email, {
         avatar_url: user.avatar_url,

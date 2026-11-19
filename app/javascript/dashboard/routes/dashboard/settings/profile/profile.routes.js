@@ -1,5 +1,5 @@
 import { frontendURL } from '../../../../helper/URLHelper';
-import { parseBoolean } from '@nerix/utils';
+import { parseBoolean } from '@chatwoot/utils';
 
 import SettingsWrapper from '../SettingsWrapper.vue';
 import Index from './Index.vue';

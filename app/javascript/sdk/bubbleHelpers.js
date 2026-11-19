@@ -2,8 +2,8 @@ import { addClasses, removeClasses, toggleClass } from './DOMHelpers';
 import { IFrameHelper } from './IFrameHelper';
 import { isExpandedView } from './settingsHelper';
 import {
-  nerix_CLOSED,
-  nerix_OPENED,
+  NERIX_CLOSED,
+  NERIX_OPENED,
 } from '../widget/constants/sdkEvents';
 import { dispatchWindowEvent } from 'shared/helpers/CustomEventHelper';
 
@@ -75,9 +75,9 @@ const handleBubbleToggle = newIsOpen => {
   IFrameHelper.events.onBubbleToggle(newIsOpen);
 
   if (newIsOpen) {
-    dispatchWindowEvent({ eventName: nerix_OPENED });
+    dispatchWindowEvent({ eventName: NERIX_OPENED });
   } else {
-    dispatchWindowEvent({ eventName: nerix_CLOSED });
+    dispatchWindowEvent({ eventName: NERIX_CLOSED });
     chatBubble.focus();
   }
 };

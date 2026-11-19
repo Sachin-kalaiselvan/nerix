@@ -68,7 +68,7 @@ module InjectEnterpriseEditionModule
   end
 
   def each_extension_for(constant_name, namespace)
-    nerixApp.extensions.each do |extension_name|
+    NerixApp.extensions.each do |extension_name|
       extension_namespace =
         const_get_maybe_false(namespace, extension_name.camelize)
 

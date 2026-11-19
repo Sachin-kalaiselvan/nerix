@@ -13,7 +13,7 @@ import Icon from 'dashboard/components-next/icon/Icon.vue';
 import NextButton from 'dashboard/components-next/button/Button.vue';
 
 import { mapGetters } from 'vuex';
-import { convertSecondsToTimeUnit } from '@nerix/utils';
+import { convertSecondsToTimeUnit } from '@chatwoot/utils';
 import { useAlert } from 'dashboard/composables';
 import { picoSearch } from '@scmmishra/pico-search';
 

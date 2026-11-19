@@ -1,4 +1,4 @@
-class nerixMarkdownRenderer
+class NerixMarkdownRenderer
   def initialize(content)
     @content = content
   end

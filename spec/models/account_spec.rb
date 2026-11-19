@@ -44,9 +44,9 @@ RSpec.describe Account do
   describe 'usage_limits' do
     let(:account) { create(:account) }
 
-    it 'returns nerixApp.max limits' do
-      expect(account.usage_limits[:agents]).to eq(nerixApp.max_limit)
-      expect(account.usage_limits[:inboxes]).to eq(nerixApp.max_limit)
+    it 'returns NerixApp.max limits' do
+      expect(account.usage_limits[:agents]).to eq(NerixApp.max_limit)
+      expect(account.usage_limits[:inboxes]).to eq(NerixApp.max_limit)
     end
   end
 

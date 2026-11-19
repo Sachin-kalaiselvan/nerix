@@ -219,23 +219,23 @@
 # ------- End of Context.dev Config ------- #
 
 # ------- nerix Internal Config for Cloud ----#
-- name: nerix_INBOX_TOKEN
+- name: NERIX_INBOX_TOKEN
   value:
   display_title: 'Inbox Token'
   description: 'The nerix Inbox Token for Contact Support in Cloud'
   locked: false
   type: secret
-- name: nerix_INBOX_HMAC_KEY
+- name: NERIX_INBOX_HMAC_KEY
   value:
   display_title: 'Inbox HMAC Key'
   description: 'The nerix Inbox HMAC Key for Contact Support in Cloud'
   locked: false
   type: secret
-- name: nerix_CLOUD_PLANS
+- name: NERIX_CLOUD_PLANS
   display_title: 'Cloud Plans'
   value:
   description: 'Config to store stripe plans for cloud'
-- name: nerix_CLOUD_PLAN_FEATURES
+- name: NERIX_CLOUD_PLAN_FEATURES
   display_title: 'Planwise Features List'
   value:
   description: 'Config to features and their associated plans'
@@ -280,14 +280,14 @@
 - name: INSTALLATION_PRICING_PLAN_QUANTITY
   value: 0
   description: 'The number of licenses purchased for the installation, retrieved from the billing API'
-- name: nerix_SUPPORT_WEBSITE_TOKEN
+- name: NERIX_SUPPORT_WEBSITE_TOKEN
   value:
   description: 'The nerix website token, used to identify the nerix inbox and display the "Contact Support" option on the billing page'
   type: secret
-- name: nerix_SUPPORT_SCRIPT_URL
+- name: NERIX_SUPPORT_SCRIPT_URL
   value:
   description: 'The nerix script base URL, to display the "Contact Support" option on the billing page'
-- name: nerix_SUPPORT_IDENTIFIER_HASH
+- name: NERIX_SUPPORT_IDENTIFIER_HASH
   value:
   description: 'The nerix identifier hash, to validate the contact in the live chat window.'
   type: secret
@@ -298,7 +298,7 @@
 # ------- End of nerix Internal Config for Self Hosted ----#
 
 # ------- Compliance Related Config ----#
-- name: nerix_INSTANCE_ADMIN_EMAIL
+- name: NERIX_INSTANCE_ADMIN_EMAIL
   display_title: 'Instance Admin Email'
   value:
   description: 'The email of the instance administrator to receive compliance-related notifications'

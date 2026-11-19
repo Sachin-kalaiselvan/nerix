@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe nerixMarkdownRenderer do
+RSpec.describe NerixMarkdownRenderer do
   let(:markdown_content) { 'This is a *test* content with ^markdown^' }
   let(:plain_text_content) { 'This is a test content with markdown' }
   let(:doc) { instance_double(CommonMarker::Node) }

@@ -14,10 +14,10 @@ class Crm::Leadsquared::SetupService
     setup_endpoint
     setup_activity
   rescue Crm::Leadsquared::Api::BaseClient::ApiError => e
-    nerixExceptionTracker.new(e, account: @hook.account).capture_exception
+    NerixExceptionTracker.new(e, account: @hook.account).capture_exception
     Rails.logger.error "LeadSquared API error in setup: #{e.message}"
   rescue StandardError => e
-    nerixExceptionTracker.new(e, account: @hook.account).capture_exception
+    NerixExceptionTracker.new(e, account: @hook.account).capture_exception
     Rails.logger.error "Error during LeadSquared setup: #{e.message}"
   end
 

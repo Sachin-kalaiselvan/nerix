@@ -23,9 +23,9 @@ import {
 import { isWidgetColorLighter } from 'shared/helpers/colorHelper';
 import { dispatchWindowEvent } from 'shared/helpers/CustomEventHelper';
 import {
-  nerix_ERROR,
-  nerix_POSTBACK,
-  nerix_READY,
+  NERIX_ERROR,
+  NERIX_POSTBACK,
+  NERIX_READY,
 } from '../widget/constants/sdkEvents';
 import { SET_USER_ERROR } from '../widget/constants/errorTypes';
 import { getUserCookieName, setCookieWithDomain } from './cookieHelpers';
@@ -190,11 +190,11 @@ export const IFrameHelper = {
       });
 
       if (!window.$nerix.resetTriggered) {
-        dispatchWindowEvent({ eventName: nerix_READY });
+        dispatchWindowEvent({ eventName: NERIX_READY });
       }
     },
     error: ({ errorType, data }) => {
-      dispatchWindowEvent({ eventName: nerix_ERROR, data: data });
+      dispatchWindowEvent({ eventName: NERIX_ERROR, data: data });
 
       if (errorType === SET_USER_ERROR) {
         Cookies.remove(getUserCookieName());
@@ -217,7 +217,7 @@ export const IFrameHelper = {
 
     postback(data) {
       dispatchWindowEvent({
-        eventName: nerix_POSTBACK,
+        eventName: NERIX_POSTBACK,
         data,
       });
     },
