@@ -10,9 +10,9 @@ class SuperAdmin::InstanceStatusesController < SuperAdmin::ApplicationController
   end
 
   def nerix_edition
-    @metrics['nerix edition'] = if nerixApp.enterprise?
+    @metrics['nerix edition'] = if NerixApp.enterprise?
                                      'Enterprise'
-                                   elsif nerixApp.custom?
+                                   elsif NerixApp.custom?
                                      'Custom'
                                    else
                                      'Community'
@@ -24,7 +24,7 @@ class SuperAdmin::InstanceStatusesController < SuperAdmin::ApplicationController
   end
 
   def nerix_version
-    @metrics['nerix version'] = nerix.config[:version]
+    @metrics['nerix version'] = Nerix.config[:version]
   end
 
   def sha

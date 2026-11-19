@@ -45,7 +45,7 @@ module UserAttributeHelpers
 
   # Used internally for nerix in nerix
   def hmac_identifier
-    hmac_key = GlobalConfig.get('nerix_INBOX_HMAC_KEY')['nerix_INBOX_HMAC_KEY']
+    hmac_key = GlobalConfig.get('NERIX_INBOX_HMAC_KEY')['NERIX_INBOX_HMAC_KEY']
     return OpenSSL::HMAC.hexdigest('sha256', hmac_key, email) if hmac_key.present?
 
     ''

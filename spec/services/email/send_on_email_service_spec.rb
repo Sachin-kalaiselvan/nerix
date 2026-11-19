@@ -60,17 +60,17 @@ describe Email::SendOnEmailService do
     context 'when an error occurs' do
       let(:error_message) { 'SMTP connection failed' }
       let(:error) { StandardError.new(error_message) }
-      let(:exception_tracker) { instance_double(nerixExceptionTracker, capture_exception: true) }
+      let(:exception_tracker) { instance_double(NerixExceptionTracker, capture_exception: true) }
       let(:status_service) { instance_double(Messages::StatusUpdateService, perform: true) }
 
       before do
         allow(mailer_context).to receive(:email_reply).with(message).and_return(delivery)
         allow(delivery).to receive(:deliver_now).and_raise(error)
-        allow(nerixExceptionTracker).to receive(:new).and_return(exception_tracker)
+        allow(NerixExceptionTracker).to receive(:new).and_return(exception_tracker)
       end
 
       it 'captures the exception' do
-        expect(nerixExceptionTracker).to receive(:new).with(error, account: message.account)
+        expect(NerixExceptionTracker).to receive(:new).with(error, account: message.account)
 
         service.perform
       end

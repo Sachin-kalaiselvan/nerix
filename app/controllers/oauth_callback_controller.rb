@@ -7,7 +7,7 @@ class OauthCallbackController < ApplicationController
 
     handle_response
   rescue StandardError => e
-    nerixExceptionTracker.new(e).capture_exception
+    NerixExceptionTracker.new(e).capture_exception
     redirect_to '/'
   end
 

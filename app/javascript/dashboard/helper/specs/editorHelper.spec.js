@@ -18,8 +18,8 @@ import {
   stripInlineBase64Images,
 } from '../editorHelper';
 import { FORMATTING } from 'dashboard/constants/editor';
-import { EditorState } from '@nerix/prosemirror-schema';
-import { EditorView } from '@nerix/prosemirror-schema';
+import { EditorState } from '@chatwoot/prosemirror-schema';
+import { EditorView } from '@chatwoot/prosemirror-schema';
 import { Schema } from 'prosemirror-model';
 
 // Define a basic ProseMirror schema

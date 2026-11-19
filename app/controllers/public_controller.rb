@@ -20,7 +20,7 @@ class PublicController < ActionController::Base
   end
 
   def ensure_portal_feature_enabled
-    return unless nerixApp.nerix_cloud?
+    return unless NerixApp.nerix_cloud?
     return if @portal.account.feature_enabled?('help_center')
 
     render 'public/api/v1/portals/not_active', status: :payment_required

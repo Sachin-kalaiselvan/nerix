@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe nerixHub do
+describe NerixHub do
   describe '.base_url' do
     it 'uses the static hub url' do
       expect(described_class::DEFAULT_BASE_URL).to eq('https://hub.2.nerix.com')

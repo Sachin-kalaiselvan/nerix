@@ -1,6 +1,6 @@
 <script setup>
 import { IFrameHelper } from 'widget/helpers/utils';
-import { nerix_ON_START_CONVERSATION } from '../constants/sdkEvents';
+import { NERIX_ON_START_CONVERSATION } from '../constants/sdkEvents';
 import AvailabilityContainer from 'widget/components/Availability/AvailabilityContainer.vue';
 import { useMapGetter } from 'dashboard/composables/store.js';
 
@@ -18,7 +18,7 @@ const startConversation = () => {
   if (!props.hasConversation) {
     IFrameHelper.sendMessage({
       event: 'onEvent',
-      eventIdentifier: nerix_ON_START_CONVERSATION,
+      eventIdentifier: NERIX_ON_START_CONVERSATION,
       data: { hasConversation: false },
     });
   }

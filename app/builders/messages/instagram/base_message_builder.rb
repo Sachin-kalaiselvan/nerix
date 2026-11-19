@@ -190,7 +190,7 @@ class Messages::Instagram::BaseMessageBuilder < Messages::Messenger::MessageBuil
   end
 
   def handle_error(error)
-    nerixExceptionTracker.new(error, account: @inbox.account).capture_exception
+    NerixExceptionTracker.new(error, account: @inbox.account).capture_exception
     true
   end
 

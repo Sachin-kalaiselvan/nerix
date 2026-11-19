@@ -36,7 +36,7 @@ RSpec.describe Captain::BaseTaskService, type: :model do
 
     context 'when usage limit is exceeded' do
       before do
-        allow(nerixApp).to receive(:nerix_cloud?).and_return(true)
+        allow(NerixApp).to receive(:nerix_cloud?).and_return(true)
         allow(account).to receive(:usage_limits).and_return({
                                                               captain: { responses: { current_available: 0 } }
                                                             })
@@ -118,7 +118,7 @@ RSpec.describe Captain::BaseTaskService, type: :model do
 
       context 'when on nerix Cloud' do
         before do
-          allow(nerixApp).to receive(:nerix_cloud?).and_return(true)
+          allow(NerixApp).to receive(:nerix_cloud?).and_return(true)
         end
 
         it 'returns upgrade error message' do
@@ -134,7 +134,7 @@ RSpec.describe Captain::BaseTaskService, type: :model do
 
       context 'when self-hosted' do
         before do
-          allow(nerixApp).to receive(:nerix_cloud?).and_return(false)
+          allow(NerixApp).to receive(:nerix_cloud?).and_return(false)
         end
 
         it 'returns disabled error message' do

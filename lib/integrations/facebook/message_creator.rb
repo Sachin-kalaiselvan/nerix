@@ -15,7 +15,7 @@ class Integrations::Facebook::MessageCreator
       create_contact_message
     end
     # rescue => e
-    # nerixExceptionTracker.new(e).capture_exception
+    # NerixExceptionTracker.new(e).capture_exception
     # end
   end
 

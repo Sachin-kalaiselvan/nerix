@@ -31,11 +31,11 @@ RSpec.describe 'Accounts API', type: :request do
         end
       end
 
-      it 'calls nerixCaptcha' do
+      it 'calls NerixCaptcha' do
         with_modified_env ENABLE_ACCOUNT_SIGNUP: 'true' do
           captcha = double
           allow(account_builder).to receive(:perform).and_return([user, account])
-          allow(nerixCaptcha).to receive(:new).and_return(captcha)
+          allow(NerixCaptcha).to receive(:new).and_return(captcha)
           allow(captcha).to receive(:valid?).and_return(true)
 
           params = { account_name: 'test', email: email, user: nil, locale: nil, user_full_name: user_full_name, password: 'Password1!',
@@ -45,7 +45,7 @@ RSpec.describe 'Accounts API', type: :request do
                params: params,
                as: :json
 
-          expect(nerixCaptcha).to have_received(:new).with('123')
+          expect(NerixCaptcha).to have_received(:new).with('123')
           expect(response.headers.keys).not_to include('access-token', 'token-type', 'client', 'expiry', 'uid')
           expect(response.parsed_body['email']).to eq(email)
         end

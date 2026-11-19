@@ -6,9 +6,9 @@ RSpec.describe Internal::CheckNewVersionsJob do
   it 'updates the latest nerix version in redis' do
     data = { 'version' => '1.2.3' }
     allow(Rails.env).to receive(:production?).and_return(true)
-    allow(nerixHub).to receive(:sync_with_hub).and_return(data)
+    allow(NerixHub).to receive(:sync_with_hub).and_return(data)
     job
-    expect(nerixHub).to have_received(:sync_with_hub)
+    expect(NerixHub).to have_received(:sync_with_hub)
     expect(Redis::Alfred.get(Redis::Alfred::LATEST_nerix_VERSION)).to eq data['version']
   end
 end

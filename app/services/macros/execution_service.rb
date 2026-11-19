@@ -13,7 +13,7 @@ class Macros::ExecutionService < ActionService
       begin
         send(action[:action_name], action[:action_params])
       rescue StandardError => e
-        nerixExceptionTracker.new(e, account: @account).capture_exception
+        NerixExceptionTracker.new(e, account: @account).capture_exception
       end
     end
   ensure

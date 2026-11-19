@@ -1,6 +1,6 @@
 <script>
 import FluentIcon from 'shared/components/FluentIcon/Index.vue';
-import { getContrastingTextColor } from '@nerix/utils';
+import { getContrastingTextColor } from '@chatwoot/utils';
 
 export default {
   components: {

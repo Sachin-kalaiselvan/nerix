@@ -43,7 +43,7 @@ class AdministratorNotifications::AccountComplianceMailer < AdministratorNotific
   end
 
   def instance_admin_email
-    GlobalConfig.get('nerix_INSTANCE_ADMIN_EMAIL')['nerix_INSTANCE_ADMIN_EMAIL']
+    GlobalConfig.get('NERIX_INSTANCE_ADMIN_EMAIL')['NERIX_INSTANCE_ADMIN_EMAIL']
   end
 
   def instance_url

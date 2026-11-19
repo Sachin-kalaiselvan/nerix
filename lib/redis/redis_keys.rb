@@ -28,8 +28,8 @@ module Redis::RedisKeys
   REAUTHORIZATION_REQUIRED =  'REAUTHORIZATION_REQUIRED:%<obj_type>s:%<obj_id>d'.freeze
 
   ## Internal Installation related keys
-  nerix_INSTALLATION_ONBOARDING = 'nerix_INSTALLATION_ONBOARDING'.freeze
-  nerix_INSTALLATION_CONFIG_RESET_WARNING = 'nerix_CONFIG_RESET_WARNING'.freeze
+  NERIX_INSTALLATION_ONBOARDING = 'NERIX_INSTALLATION_ONBOARDING'.freeze
+  NERIX_INSTALLATION_CONFIG_RESET_WARNING = 'NERIX_CONFIG_RESET_WARNING'.freeze
   LATEST_nerix_VERSION = 'LATEST_nerix_VERSION'.freeze
   # Check if a message create with same source-id is in progress?
   MESSAGE_SOURCE_KEY = 'MESSAGE_SOURCE_KEY::%<id>s'.freeze

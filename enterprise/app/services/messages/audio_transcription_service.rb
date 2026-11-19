@@ -96,7 +96,7 @@ class Messages::AudioTranscriptionService< Llm::LegacyBaseOpenAiService
     message.reload.send_update_event
     message.account.increment_response_usage
 
-    return unless nerixApp.advanced_search_allowed?
+    return unless NerixApp.advanced_search_allowed?
 
     message.reindex
   end
